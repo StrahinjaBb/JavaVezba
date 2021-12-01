@@ -30,5 +30,22 @@ public class Niz {
         return a;
     }
 
+    private void dobra() {
+        
+    }
 
+    private void losa() {
+
+    }
+
+    public synchronized void promeni(int ind) {
+        if(ind == 1)
+            this.dobra();
+
+        else if(ind == 2)
+            this.losa();
+
+        else
+            return;
+    }
 }
