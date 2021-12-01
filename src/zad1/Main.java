@@ -20,5 +20,12 @@ public class Main {
         System.out.println("Udaljenost broda " + b1.toString() + " i " + b2.toString() + " je: " + b1.udaljenost(b2));
 
         Niz niz = new Niz("JEEJ");
+        Nit dobra = new Nit(150, niz);
+        Nit losa = new Nit(400, niz);
+        dobra.setName("BRZA");
+        losa.setName("SPORA");
+
+        dobra.start();
+        losa.start();
     }
 }

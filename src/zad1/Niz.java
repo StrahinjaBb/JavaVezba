@@ -31,11 +31,40 @@ public class Niz {
     }
 
     private void dobra() {
-        
+        for(int i=0; i<n; i++) {
+            if(i == 0 && niz[i] == 'L')
+                continue;
+            else if(i == 1 && niz[i] == 'E')
+                continue;
+            else if(i == 2 && niz[i] == 'G')
+                continue;
+            else if(i == 3 && niz[i] == 'O')
+                continue;
+            else {
+                synchronized (niz) {
+                    niz[i] += 1;
+                }
+            }
+        }
     }
 
     private void losa() {
+        for(int i=0; i<n; i++) {
+            if(i == 0 && niz[i] == 'L')
+                continue;
+            else if(i == 1 && niz[i] == 'E')
+                continue;
+            else if(i == 2 && niz[i] == 'G')
+                continue;
+            else if(i == 3 && niz[i] == 'O')
+                continue;
 
+            else {
+                synchronized (niz) {
+                    niz[i] -= 1;
+                }
+            }
+        }
     }
 
     public synchronized void promeni(int ind) {
