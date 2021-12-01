@@ -18,5 +18,7 @@ public class Main {
         System.out.println(b2.toString());
 
         System.out.println("Udaljenost broda " + b1.toString() + " i " + b2.toString() + " je: " + b1.udaljenost(b2));
+
+        Niz niz = new Niz("JEEJ");
     }
 }
